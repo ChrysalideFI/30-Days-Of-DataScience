@@ -1,0 +1,14 @@
+Fiche regroupant ce que j'ai pu (re)découvrir 
+
+Day 4 : 
+DEFAULT ARGUMENTS in function : Functions can have default values for parameters, making them optional.
+
+        def greet(name="Data Scientist"): #default argument of name is "Data Scientist"
+            print(f"Welcome, {name}!")
+
+        greet() #Si pas de paramère indiqué alors le paramètre par défaut est utilisé
+        greet("Alice")
+
+        Output:
+        Welcome, Data Scientist!
+        Welcome, Alice!
