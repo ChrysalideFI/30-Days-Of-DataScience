@@ -41,6 +41,34 @@ def grade_classifier(grades):
   return grades_result
 print (grade_classifier(grades))
 
+# 3. prints all even numbers from 1 to 50 using a for loop. 
+for i in range (1, 50): 
+  if (i%2==0) :
+    print(i)
+  
+# Better version : 
+
+for i in range (2, 50, 2): 
+  print(i)
 
 
+# 4. Sums the numbers from 1 to 100 using a while loop
+number = 1
+sum=0
+while number != 101 : 
+  sum+=number
+  number+=1
+print(sum)
+
+
+# 5. Use break and continue
+numbers = [3, -1, 7, 12, -5, 42, 9, 15] 
+
+for n in numbers: 
+  if n < 0: 
+    continue # on ignore les nombres négatifs 
+  print("Nombre analysé :", n) 
+  if n == 42: 
+    print("Nombre spécial trouvé ! On arrête la recherche.") 
+    break # on arrête complètement la boucle
 
