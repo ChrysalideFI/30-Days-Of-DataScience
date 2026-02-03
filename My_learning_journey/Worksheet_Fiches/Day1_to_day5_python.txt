@@ -1,7 +1,7 @@
-Fiche regroupant ce que j'ai pu (re)découvrir 
+Fiche regroupant ce que j'ai pu (re)découvrir en plus de certains rappels de connaissances
 
 Day 4 : 
-DEFAULT ARGUMENTS in function : Functions can have default values for parameters, making them optional.
+** DEFAULT ARGUMENTS in function : Functions can have default values for parameters, making them optional.
 
         def greet(name="Data Scientist"): #default argument of name is "Data Scientist"
             print(f"Welcome, {name}!")
@@ -12,3 +12,51 @@ DEFAULT ARGUMENTS in function : Functions can have default values for parameters
         Output:
         Welcome, Data Scientist!
         Welcome, Alice!
+
+** FUNCTION CALL : executes the code inside a function definition.
+
+        Example 1: Calling a Simple Function
+        def say_hello():
+            print("Hello!")
+
+        # Function call
+        say_hello()
+
+        Output:
+        Hello!
+
+        Example 2: Function Call with Parameters
+        def add(a, b):
+            return a + b
+
+        result = add(10, 20)  # Function call
+        print(f"The sum is {result}.")
+
+        Output:
+        The sum is 30.
+
+** What is Modular Programming?
+Modular programming involves breaking a program into smaller, manageable parts or modules. It enhances readability, reusability, and maintainability.
+
+** What a module ?
+A module is a Python file containing functions, variables, and classes that can be reused in other files.
+
+    Create a Module: Save your Python file (e.g., my_module.py).
+    
+    # my_module.py
+    def greet(name):
+        return f"Hello, {name}!"
+    
+    Import the Module: Use the import keyword in another file.
+    # main.py
+    import my_module # file my_module.py
+
+    message = my_module.greet("Alice")
+    print(message)
+    
+    Output:
+    Hello, Alice!
+
+    Other example : 
+    # main.py -> fichier dans lequel je suis
+    from math_utils import add, multiply # De mon fichier / module math_utils j'importe les fonctions add et multiply que j'ai créer dedans
