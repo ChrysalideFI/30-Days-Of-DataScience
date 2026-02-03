@@ -60,3 +60,21 @@ A module is a Python file containing functions, variables, and classes that can 
     Other example : 
     # main.py -> fichier dans lequel je suis
     from math_utils import add, multiply # De mon fichier / module math_utils j'importe les fonctions add et multiply que j'ai créer dedans
+
+** For i in range (1, number) -> pas besoin de faire i+=1 comme en java car incrémente automatiquement
+
+** Division entière : arrondit à l'entier inférieur
+
+** Import 
+    from .math_utils import exponentiation # . ->  Signifie que le fichier est dans le même dossier
+
+    result = exponentiation(2, 4)
+    print (result)
+
+    # Autre possibilité, si je veux utiliser beaucoup de fonctions du module sans toute les cités dans l'import : 
+    from . import math_utils
+
+    result = math_utils.exponentiation(2, 4)
+    print (result)
+
+** Random doc : https://docs.python.org/fr/3/library/random.html
