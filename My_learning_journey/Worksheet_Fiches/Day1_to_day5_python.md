@@ -1,7 +1,7 @@
-Fiche regroupant ce que j'ai pu (re)découvrir en plus de certains rappels de connaissances
+# Fiche regroupant ce que j'ai pu (re)découvrir en plus de certains rappels de connaissances
 
-Day 4 : 
-** DEFAULT ARGUMENTS in function : Functions can have default values for parameters, making them optional.
+# Day 4 : 
+## DEFAULT ARGUMENTS in function : Functions can have default values for parameters, making them optional.
 
         def greet(name="Data Scientist"): #default argument of name is "Data Scientist"
             print(f"Welcome, {name}!")
@@ -13,7 +13,7 @@ Day 4 :
         Welcome, Data Scientist!
         Welcome, Alice!
 
-** FUNCTION CALL : executes the code inside a function definition.
+## FUNCTION CALL : executes the code inside a function definition.
 
         Example 1: Calling a Simple Function
         def say_hello():
@@ -35,10 +35,10 @@ Day 4 :
         Output:
         The sum is 30.
 
-** What is Modular Programming?
+## What is Modular Programming?
 Modular programming involves breaking a program into smaller, manageable parts or modules. It enhances readability, reusability, and maintainability.
 
-** What a module ?
+## What a module ?
 A module is a Python file containing functions, variables, and classes that can be reused in other files.
 
     Create a Module: Save your Python file (e.g., my_module.py).
@@ -61,11 +61,11 @@ A module is a Python file containing functions, variables, and classes that can 
     # main.py -> fichier dans lequel je suis
     from math_utils import add, multiply # De mon fichier / module math_utils j'importe les fonctions add et multiply que j'ai créer dedans
 
-** For i in range (1, number) -> pas besoin de faire i+=1 comme en java car incrémente automatiquement
+## For i in range (1, number) -> pas besoin de faire i+=1 comme en java car incrémente automatiquement
 
-** Division entière : arrondit à l'entier inférieur
+## Division entière : arrondit à l'entier inférieur
 
-** Import 
+## Import 
     from .math_utils import exponentiation # . ->  Signifie que le fichier est dans le même dossier
 
     result = exponentiation(2, 4)
@@ -77,4 +77,13 @@ A module is a Python file containing functions, variables, and classes that can 
     result = math_utils.exponentiation(2, 4)
     print (result)
 
-** Random doc : https://docs.python.org/fr/3/library/random.html
+## Random doc : https://docs.python.org/fr/3/library/random.html
+
+## What is an Enumerate ?
+Une fonction intégrée qui associe un indice à chaque élément d’un itérable (liste, tuple, chaîne, etc.).
+Principes de base : 
+    Signature : enumerate(iterable, start=0)
+    iterable : l’objet à parcourir.
+    start : valeur de l’indice du premier élément (par défaut 0).
+    Retourne un objet itérable qui produit des tuples (indice, élément).
+
