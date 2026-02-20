@@ -1,4 +1,4 @@
-# Comprehension : list comprehension, dict comprehension, etc
+# Day 1, Comprehension : list comprehension, dict comprehension, etc
 
 # faire 3 list comprehensions 1 dict comprehension 1 nettoyage de données (sans regarder le cours)
 
@@ -38,4 +38,56 @@ print(nbr_pair)
 mail = ["exemple@hotmail.fr", "ex@hotmail.fr", "exemple@hotmail.fr"]
 cleaned_data_mail = list(set(mail))
 print(cleaned_data_mail)
+
+# Day 2, extraire stats simple d'une list of dicts : mean, count (à la main)
+ventes_02_2026 = [
+    {"nom": "Produit A", "ventes": 120, "revenu": 2400.0},
+    {"nom": "Produit B", "ventes": 85,  "revenu": 1700.0},
+    {"nom": "Produit C", "ventes": 47,  "revenu":  940.0},
+    {"nom": "Produit D", "ventes": 132, "revenu": 2640.0},
+]
+
+# Total des produits
+count_produits = 0
+for produit in ventes_02_2026 : 
+  count_produits+=1
+print(count_produits)
+
+# Autre façon de fiare plus simple
+count_produits=(len(ventes_02_2026))
+print(count_produits)
+
+# Moyenne des ventes
+total_ventes = sum(item["ventes"] for item in ventes_02_2026)
+mean_ventes = total_ventes/count_produits
+print(mean_ventes)
+
+# Day 3 
+ventes_02_2026 = [
+    {"nom": "Produit A", "ventes": 120, "revenu": 2400.0},
+    {"nom": "Produit B", "ventes": 85,  "revenu": 1700.0},
+    {"nom": "Produit C", "ventes": 47,  "revenu":  940.0},
+    {"nom": "Produit D", "ventes": 132, "revenu": 2640.0},
+]
+  
+def stats_simple(ventes):
+    if not ventes:                     # protection contre liste vide
+        return 0, None, None
+
+    # somme des ventes
+    total_ventes = sum(vente["ventes"] for vente in ventes)
+
+    # moyenne
+    moyenne_ventes = total_ventes / len(ventes)
+
+    # listes des valeurs de ventes
+    list_ventes = [vente["ventes"] for vente in ventes]
+
+    # min / max
+    min_ventes = min(list_ventes)
+    max_ventes = max(list_ventes)
+
+    return moyenne_ventes, min_ventes, max_ventes
+
+print(stats_simple(ventes_02_2026))
 
